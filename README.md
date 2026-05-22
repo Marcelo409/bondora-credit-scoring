@@ -70,6 +70,33 @@ The bad rate progresses cleanly from 6.5% in decile 1 (lowest predicted risk) to
 
 ---
 
+## How This Applies to Banking
+
+The methodology and decisions used here mirror real-world credit scoring
+workflows in retail and SME banking:
+
+- **Target definition vs censored data**: identical challenge faced when
+  building Probability of Default (PD) models for IFRS 9 expected loss
+  calculations. Active accounts cannot be labeled as "good" without
+  performance window adjustment.
+- **Data leakage detection**: production-deployable models must use only
+  application-time variables. Identifying and excluding post-event
+  features is the standard validation step before deployment.
+- **Benchmarking against incumbent**: any new credit score must
+  outperform the model currently in production, measured on the same
+  population using the same target.
+- **Calibrated probability output**: required for risk-based pricing,
+  loan loss provisioning (IFRS 9), and regulatory capital calculations
+  (Basel III standardized approach).
+- **Score scaling (FICO-style)**: standard transformation used in
+  consumer credit bureaus worldwide for business-readable output.
+
+These principles apply equally to a Peruvian bank evaluating retail
+applicants, an SBS-regulated microfinance institution, or a fintech
+underwriting consumer loans.
+
+---
+
 ## Tech Stack
 
 - **Python 3.11** (Google Colab)
