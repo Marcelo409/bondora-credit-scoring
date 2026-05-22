@@ -22,7 +22,7 @@ Evaluated on a held-out test set of 80,806 loans (25,942 with Bondora rating ava
 
 ## Project Goal
 
-Build a credit scoring model on Bondora's public P2P loan dataset (~915M EUR portfolio across 7 European countries) and demonstrate that it outperforms the platform's published risk rating — the canonical baseline to beat in any credit scoring exercise.
+Build a credit scoring model on Bondora's public P2P loan dataset (~915M EUR portfolio across 7 European countries) and demonstrate that it improves upon Bondora's published rating variable, using it as a transparent benchmark for model comparison in a credit scoring exercise.
 
 ---
 
